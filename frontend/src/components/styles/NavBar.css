@@ -1,0 +1,27 @@
+/* Add your CSS styles for NavBar component here */
+.nav {
+  /* Add your navigation bar styles */
+}
+
+.menu {
+  /* Add your menu container styles */
+}
+
+.menuItem {
+  /* Add your menu item styles */
+  display: inline-block; /* Adjust as needed */
+  margin-right: 20px; /* Adjust as needed */
+  position: relative;
+}
+
+.submenu {
+  /* Add your submenu container styles */
+  display: none; /* Hide submenus by default */
+  position: absolute;
+  top: 100%; /* Position below the menu item */
+}
+
+.menuItem:hover .submenu {
+  /* Display submenu on hover */
+  display: block;
+}
