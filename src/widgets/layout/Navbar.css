@@ -1,0 +1,12 @@
+.dropdown {
+    width: 60vw;
+    height: 30vw;
+}
+
+:root {
+    --border-color: rgb(55, 55, 55);
+}
+
+.navborder {
+    border: 1px groove var(--border-color);
+   }
