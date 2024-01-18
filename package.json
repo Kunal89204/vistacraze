@@ -1,7 +1,39 @@
 {
+  "name": "VistaCraze",
+  "private": true,
+  "version": "2.0.0",
+  "proxy": "http://localhost:5000",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@nextui-org/react": "^2.2.9",
-    "gsap": "^3.12.4",
-    "react-icons": "^5.0.1"
+    "@heroicons/react": "^2.0.12",
+    "@mantine/core": "^7.2.2",
+    "@material-tailwind/react": "^1.2.4",
+    "@mui/icons-material": "^5.14.19",
+    "@react-spring/web": "^9.7.3",
+    "antd": "^5.11.5",
+    "antd-style": "^3.5.2",
+    "axios": "^1.6.2",
+    "material-icons": "^1.13.12",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.20.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.2.1",
+    "vite": "^3.2.0"
   }
 }
