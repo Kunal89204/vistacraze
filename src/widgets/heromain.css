@@ -1,0 +1,12 @@
+.herobgimg{
+    height: 100vw;
+    width: 30vw;
+}
+.herobgimg1{
+    height: 100vw;
+    width: 70vw;
+}
+.textmode{
+    color: white;
+    mix-blend-mode: difference;
+}

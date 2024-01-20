@@ -1,0 +1,43 @@
+
+
+
+
+
+
+.img-container {
+    /* background-color: rgb(251, 251, 251); */
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.imgDiv {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    margin: 15px;
+    padding: 2px;
+    display: none;
+    animation-name: cards;
+    animation-duration: 300ms;
+}
+
+.show {
+    display: block;
+    animation-timing-function: ease;
+    animation-name: cards;
+    animation-duration: 300ms;
+}
+
+@keyframes cards {
+    0% {
+        transform: scale(0.6, 0.6);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}

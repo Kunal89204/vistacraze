@@ -73,3 +73,10 @@ body {
 .overlay {
     overflow: hidden;
 }
+
+
+
+.Circle{
+    border-radius: 100%;
+
+}

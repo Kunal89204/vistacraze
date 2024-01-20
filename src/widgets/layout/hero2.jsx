@@ -45,7 +45,7 @@ const App = () => {
 
 
     <div className="wrapper text-7xl w-3/4">
-      <h2>Transforming Visions into Digital Triumphs – Your Success, Our Expertise. Elevate your brand with strategic digital marketing that resonates, engages, and delivers results. Welcome to a journey where innovation meets impact!  </h2>
+      <h2 className='heading2'>Transforming Visions into Digital Triumphs – Your Success, Our Expertise. Elevate your brand with strategic digital marketing that resonates, engages, and delivers results. Welcome to a journey where innovation meets impact!  </h2>
     </div>
       </div>
   );

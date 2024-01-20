@@ -1,6 +1,39 @@
 .dropdown {
     width: 60vw;
-    height: 30vw;
+    height: auto;
 }
 
 
+
+.style-28 {
+    position: relative;
+    z-index: 9;
+    color: #ffffff;
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.5s;
+    display: block;
+}
+
+.style-28::after {
+    content: attr(data-after);
+    display: inline-block;
+    transform: translateY(100%);
+    position: absolute;
+    left: 0;
+    transition: inherit;
+}
+
+.style-28>span {
+    display: inline-block;
+    transform: translateY(0%);
+    transition: inherit;
+}
+
+.style-28:hover>span {
+    transform: translateY(-100%);
+}
+
+.style-28:hover::after {
+    transform: translateY(0%);
+}

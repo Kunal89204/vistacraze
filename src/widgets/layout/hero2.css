@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Geist Sans";
-    src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+    /* src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype"); */
 }
 
 * {
@@ -44,7 +44,7 @@
     --primary-bg: conic-gradient(from var(--angle, 180deg) at 50% 70%, hsla(0, 0%, 98%, 1) 0deg, #eec32d 72.0000010728836deg, #ec4b4b 144.0000021457672deg, #709ab9 216.00000858306885deg, #4dffbf 288.0000042915344deg, hsla(0, 0%, 98%, 1) 1turn);
 }
 
-h2 {
+.heading2 {
     font-weight: 120;
     line-height: 1.07;
     resize: both;
@@ -67,11 +67,11 @@ h2 {
     margin: 0;
 }
 
-.wrapper {
+/* .wrapper {
     padding: 2rem;
     background: var(--bg);
     position: relative;
-}
+} */
 
 @media(prefers-reduced-motion: no-preference) {
     @property --angle {
