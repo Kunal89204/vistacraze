@@ -11,7 +11,7 @@ const heromain = () => {
     const [ isHovered, setIsHovered ] = useState( false );
 
     return (
-        <div className='h-screen overflow-hidden w-screen  justify-center items-center '>
+        <div className='h-screen overflow-hidden w-screen  justify-center items-center ' >
             <div className='w-screen absolute grid grid-flow-col  grid-cols-1 -z-10'>
                 <img src={Star} alt="" className='herobgimg1 mix-blend-darken -top-52 -z-10' />
                 <img src={herobg} alt='' className=" herobgimg   top-0 -z-10" />
@@ -19,7 +19,7 @@ const heromain = () => {
 
             <div className='flex h-screen justify-center gap-10 items-center flex-col'>
 
-                <div className='flex h-52 text-8xl mt-20 items-center relative justify-center font-extralight'>
+                <div className='flex h-52 text-8xl mt-20 items-center relative justify-center font-extralight' >
                     DIGITAL
 
                     <span
@@ -47,6 +47,7 @@ const heromain = () => {
                 </div>
 
             </div>
+
 
 
         </div>

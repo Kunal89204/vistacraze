@@ -5,6 +5,9 @@ import Hero2 from "../widgets/layout/hero2"
 import Hero3 from "../widgets/layout/hero3"
 import Heromain from "../widgets/layout/heromain"
 import Cards from "../widgets/layout/cards"
+// import Section1 from "../widgets/layout/simple-footer"
+import Footer from "../widgets/layout/footer"
+import Anim from "../widgets/layout/RealatedServices"
 const App = () => {
   return (
     <div >
@@ -12,8 +15,10 @@ const App = () => {
       <Heromain/>
       <Hero />
       <Hero2 />
-      <Cards/>
-      {/* <Hero3/> */}
+      <Anim/>
+
+      {/* <Section1 /> */}
+      <Footer />
     </div>
   )
 }

@@ -1,62 +1,100 @@
-import PropTypes from "prop-types";
-import { Typography } from "@material-tailwind/react";
-import { HeartIcon } from "@heroicons/react/24/solid";
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import "./section.css"
+gsap.registerPlugin(ScrollTrigger);
 
-export function SimpleFooter({ brandName, brandLink, routes }) {
-  const year = new Date().getFullYear();
+const ColorChangingSections = () => {
+  useEffect(() => {
+    const container = document.querySelector(".container");
+
+    const firstSection = {
+      section: document.querySelector("#first-section"),
+      bgColor: "#000",
+      fontColor: "#F0F400",
+      cardBgColor: "#fff"
+    };
+
+    const secondSection = {
+      section: document.querySelector("#second-section"),
+      bgColor: "#fff",
+      fontColor: "#6EC6DF",
+      cardBgColor: "#000"
+    };
+
+    const thirdSection = {
+      section: document.querySelector("#third-section"),
+      bgColor: "#000",
+      fontColor: "#233329",
+      cardBgColor: "#fff"
+    };
+
+    function setColors(curr, next) {
+      let tl = gsap.timeline({ ease: 'power2.in' });
+      tl.to(".card", {
+        duration: 1,
+        background: next.cardBgColor
+      }).to(container, {
+        duration: 1,
+        background: next.bgColor,
+        color: next.fontColor,
+        delay: -1
+      });
+    }
+
+    gsap.set(container, {
+      backgroundColor: firstSection.bgColor,
+      color: firstSection.fontColor
+    });
+
+    gsap.set(".card", {
+      backgroundColor: firstSection.cardBgColor
+    });
+
+    gsap.to(secondSection, {
+      duration: 1,
+      scrollTrigger: {
+        trigger: secondSection.section,
+        markers: true,
+        start: "top 70%",
+        end: '+=100',
+        onEnter: () => setColors(firstSection, secondSection),
+        onLeaveBack: () => setColors(secondSection, firstSection)
+      }
+    });
+
+    gsap.to(thirdSection.section, {
+      duration: 1,
+      scrollTrigger: {
+        trigger: thirdSection.section,
+        markers: true,
+        start: "top 70%",
+        end: '+=100',
+        onEnter: () => setColors(secondSection, thirdSection),
+        onLeaveBack: () => setColors(thirdSection, secondSection)
+      }
+    });
+  }, []);
 
   return (
-    <footer className="py-2">
-      <div className="flex w-full flex-wrap items-center justify-center gap-6 px-2 md:justify-between">
-        <Typography variant="small" className="font-normal text-inherit">
-          &copy; {year}, made with{" "}
-          <HeartIcon className="-mt-0.5 inline-block h-3.5 w-3.5" /> by{" "}
-          <a
-            href={brandLink}
-            target="_blank"
-            className="transition-colors hover:text-blue-500"
-          >
-            {brandName}
-          </a>{" "}
-          for a better web.
-        </Typography>
-        <ul className="flex items-center gap-4">
-          {routes.map(({ name, path }) => (
-            <li key={name}>
-              <Typography
-                as="a"
-                href={path}
-                target="_blank"
-                variant="small"
-                className="py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
-              >
-                {name}
-              </Typography>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </footer>
+    <div className="container">
+      <section id="first-section">
+        <div className="card">
+          <h1>First</h1>
+        </div>
+      </section>
+      <section id="second-section">
+        <div className="card">
+          <h1>Second</h1>
+        </div>
+      </section>
+      <section id="third-section">
+        <div className="card">
+          <h1>Third</h1>
+        </div>
+      </section>
+    </div>
   );
-}
-
-SimpleFooter.defaultProps = {
-  brandName: "#",
-  brandLink: "#",
-  routes: [
-    { name: "#", path: "#" },
-    { name: "#", path: "#" },
-    { name: "Blog", path: "#" },
-    { name: "License", path: "#" },
-  ],
 };
 
-SimpleFooter.propTypes = {
-  brandName: PropTypes.string,
-  brandLink: PropTypes.string,
-  routes: PropTypes.arrayOf(PropTypes.object),
-};
-
-SimpleFooter.displayName = "/src/widgets/layout/simple-footer.jsx";
-
-export default SimpleFooter;
+export default ColorChangingSections;

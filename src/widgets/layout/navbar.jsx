@@ -108,7 +108,7 @@ export default function Example( { currentPage } ) {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="relative inline-block ring-0 border-0  bg-gray-100  border-transparent text-left group">
                     <button
                       type="button"
@@ -193,7 +193,8 @@ export default function Example( { currentPage } ) {
                       type="button"
                       className="inline-flex justify-center items-center px-4 py-2  shadow-sm text-sm  font-medium rounded-md hover:underline "
                     >
-                      Our Process
+                    Industries
+
 
                     </button>
                     <div className="hidden group-hover:block origin-top-right dropdown -left-96 -ml-96 absolute p-10 text-4xl right-0   -left-44 rounded-md shadow-lg bg-black ring-1  text-white ring-black ring-opacity-5">
