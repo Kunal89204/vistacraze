@@ -45,9 +45,7 @@ const Track = () => {
   return (
 
     <div>
-      <div className='text-black mt-52'>
-        hello
-        </div>
+
 
     <div className="track">
 
@@ -61,7 +59,7 @@ const Track = () => {
           <div className="scale">
             <div className="rotate">
               <div className="img">
-                <img src={Logo} alt="" className='-rotate-45'/>
+                <img src={Logo} alt="" className='-rotate-45 '/>
 
               </div>
             </div>
