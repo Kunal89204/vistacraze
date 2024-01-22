@@ -1,22 +1,13 @@
 /* CustomScrollbar.css */
-
-/* Define the scrollbar styles */
-::-webkit-scrollbar {
-    width: 6px;
+body::-webkit-scrollbar {
+    width: 5px;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background-color: rgb(40, 40, 255);
-    /* Set the desired color for the scrollbar handle */
+body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(32, 32, 32);
     border-radius: 10px;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    /* Set the background color for the scrollbar track */
-}
-
-
-

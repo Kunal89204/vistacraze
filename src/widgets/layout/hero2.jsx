@@ -41,7 +41,7 @@ const App = () => {
   }, []);
 
     return (
-      <div className='hero2 h-auto'>
+      <div className='hero2 h-auto pt-20'>
 
 
     <div className="wrapper text-7xl w-3/4">

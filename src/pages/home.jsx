@@ -7,7 +7,9 @@ import Heromain from "../widgets/layout/heromain"
 import Cards from "../widgets/layout/cards"
 // import Section1 from "../widgets/layout/simple-footer"
 import Footer from "../widgets/layout/footer"
-import Anim from "../widgets/layout/RealatedServices"
+import Anim from "../widgets/layout/simple-footer"
+import FaqItem from "./FAQBox"
+import Faq from "../pages/FAQ"
 const App = () => {
   return (
     <div >
@@ -16,7 +18,8 @@ const App = () => {
       <Hero />
       <Hero2 />
       <Anim/>
-
+      <FaqItem />
+      <Faq/>
       {/* <Section1 /> */}
       <Footer />
     </div>

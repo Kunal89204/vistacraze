@@ -1,20 +1,9 @@
 section {
     height: 110vh;
+
     background: transparent;
-
     display: flex;
-    justify-content: center;
-    align-items: center;
 
-    font-family: 'Rubik Moonrocks', cursive;
+
     text-transform: uppercase;
-
 }
-
-.card {
-    padding: 50px;
-    width: 100%;
-    text-align: center;
-}
-
-

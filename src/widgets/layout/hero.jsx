@@ -23,7 +23,7 @@ const Track = () => {
       .to(
         text,
         {
-          duration: 1,
+          duration: 2,
           translateX: 0,
           ease: 'Power2.easeIn',
         },
